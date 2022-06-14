@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "skeleton-angular": {
+    "skeleton-ts-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/skeleton-angular",
+            "outputPath": "dist/skeleton-ts-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,21 +64,18 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "skeleton-angular:build:production"
+              "browserTarget": "skeleton-ts-angular:build:production"
             },
             "development": {
-              "browserTarget": "skeleton-angular:build:development"
+              "browserTarget": "skeleton-ts-angular:build:development"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "port": 3000
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "skeleton-angular:build"
+            "browserTarget": "skeleton-ts-angular:build"
           }
         },
         "test": {

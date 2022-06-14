@@ -25,12 +25,10 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/skeleton-angular'),
+      dir: require('path').join(__dirname, './coverage/skeleton-ts-angular'),
       subdir: '.',
       reporters: [
         { type: 'lcov' },
-        { type: 'html' },
-        { type: 'text-summary' }
       ]
     },
     reporters: ['progress', 'kjhtml'],
