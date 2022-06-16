@@ -25,10 +25,10 @@ jobs:
           if [ ! -z "${{ secrets.SONAR_TOKEN }}" ] && [ ! -z "${{ secrets.SONAR_HOST_URL }}" ]; then
             echo "::set-output name=ok::true"
           fi
-          
+
   sonarqube:
     needs:
-        - secrets-gate
+      - secrets-gate
     if: ${{ needs.secrets-gate.outputs.ok == 'true' }}
     runs-on: ubuntu-latest
     steps:
@@ -39,17 +39,8 @@ jobs:
           node-version: '16'
           cache: 'yarn'
 
-      - name: Generate API coverage
-        run: |
-          cd api
-          yarn install
-          yarn test --coverage
-        env:
-          CI: true
-
       - name: Generate webapp coverage
         run: |
-          cd webapp
           yarn install
           yarn coverage
         env:
