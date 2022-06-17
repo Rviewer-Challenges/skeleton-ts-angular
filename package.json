@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 3000",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "watch": "ng build --watch --browsers=ChromeHeadlessCI --configuration development",
     "test": "ng test",
-    "coverage": "ng test --no-watch --code-coverage"
+    "coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI"
   },
   "private": true,
   "dependencies": {

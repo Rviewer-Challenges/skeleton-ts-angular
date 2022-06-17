@@ -16,9 +16,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Welcome to the Rviewer Angular skeleton!'`, () => {
+  it(`should have as title 'skeleton-ts-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Welcome to the Rviewer Angular skeleton!');
+    expect(app.title).toEqual('skeleton-ts-angular');
   });
 });
