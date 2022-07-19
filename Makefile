@@ -12,8 +12,8 @@ up: deps
 
 .PHONY: test
 test: deps
-	@ yarn test
+	@ docker run -w "/opt/app" -v "${PWD}:/opt/app" node:alpine yarn test
 
 .PHONY: coverage
 coverage: deps
-	@ yarn coverage
+	@ docker run -w "/opt/app" -v "${PWD}:/opt/app" node:alpine yarn coverage
